@@ -1,0 +1,43 @@
+{
+  "database": {
+    "schema": {
+      "project_tip_contributions_v3": {
+        "id": {
+          "type": "text",
+          "description": "Primary key: projectId-tipper_user_id"
+        },
+        "project_id": {
+          "type": "text",
+          "description": "The ID of the project where the tips were made."
+        },
+        "tipper_user_id": {
+          "type": "uuid",
+          "description": "The ID of the user who tipped."
+        },
+        "username": {
+          "type": "text",
+          "description": "The username of the user who tipped."
+        },
+        "total_tipped": {
+          "type": "integer",
+          "description": "The total amount of credits tipped by the user in the project."
+        }
+      },
+      "scanned_projects": {
+        "project_id": {
+          "type": "text",
+          "description": "The project ID that was scanned (primary key)"
+        },
+        "last_scanned_at": {
+          "type": "timestamptz",
+          "description": "When this project was last scanned"
+        },
+        "last_comment_count": {
+          "type": "integer",
+          "description": "Number of comments when last scanned"
+        }
+      }
+    }
+  }
+}
+
